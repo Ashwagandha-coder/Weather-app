@@ -2,6 +2,7 @@ package com.example.new1project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -43,12 +44,14 @@ public class MainActivity extends AppCompatActivity {
                     String key = "1d3021f47c153ecc4ea3724ea8f1d9af";
                     String url ="https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key + "&units=metric&lang=ru";
 
+                    new GetUrlData().execute(url);
+
 
                 }
             }
         });
     }
-
+    @SuppressLint("StaticFieldLint")
     private class GetUrlData extends AsyncTask<String, String, String> {
 
         @Override
