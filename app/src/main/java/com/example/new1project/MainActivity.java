@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 if(user_field.getText().toString().trim().equals(""))
                     Toast.makeText(MainActivity.this,R.string.no_user_input,Toast.LENGTH_LONG).show();
                 else {
-                    
+
                 }
             }
         });
