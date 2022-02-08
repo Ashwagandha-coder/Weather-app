@@ -18,13 +18,17 @@
         android:textSize="30sp" />
 
     <EditText
-        android:id="@user_field"
+        android:id="@+id/user_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:layout_below="@id/logo"
-        android:backgroundTint=""
+        android:backgroundTint="@color/textColor"
+        android:layout_marginTop="100sp"
+        android:layout_marginHorizontal="50sp"
         android:inputType="textPersonName"
-        android:text="Name" />
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/textColorHint"
+        android:hint="@string/hint_user_field" />
 
 </RelativeLayout>
