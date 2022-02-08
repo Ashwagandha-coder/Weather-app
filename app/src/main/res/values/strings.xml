@@ -3,4 +3,5 @@
     <string name="neq_name">Weather</string>
     <string name="logo">Погода в вашем городе</string>
     <string name="hint_user_field">Введите город</string>
+    <string name="textButton">Узнать погоду</string>
 </resources>

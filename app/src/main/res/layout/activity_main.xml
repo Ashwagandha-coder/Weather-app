@@ -30,5 +30,24 @@
         android:textColor="@color/textColor"
         android:textColorHint="@color/textColorHint"
         android:hint="@string/hint_user_field" />
+    <Button
+        android:id="@+id/main_btn"
+        android:fontFamily="@font/montserrat_alternates"
+        android:layout_marginTop="20sp"
+        android:layout_marginHorizontal="130sp"
+        android:backgroundTint="@color/ButtonColorBackground"
+        android:layout_below="@id/user_field"
+        android:text="@string/textButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/result_info"
+        android:layout_below="@id/main_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_alternates"
+        android:layout_marginTop="50sp"
+        android:textAlignment="center"
+        android:textSize="25sp" />
 
 </RelativeLayout>
