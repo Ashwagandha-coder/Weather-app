@@ -94,6 +94,9 @@ public class MainActivity extends AppCompatActivity {
         }
         @Override
         protected void onPostExecute(String result) {
+            super.onPostExecute(result);
+
+            result_info.setText(result);
 
         }
     }
