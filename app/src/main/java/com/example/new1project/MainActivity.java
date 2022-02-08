@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer buffer = new StringBuffer();
                 String line ="";
 
-                while(line = reader.readLine() != null)
+                while((line = reader.readLine()) != null)
                     buffer.append(line).append("\n");
 
                 return buffer.toString();
@@ -81,9 +81,19 @@ public class MainActivity extends AppCompatActivity {
                 if(connection != null)
                     connection.disconnect();
 
-                if(reader != null)
-                    reader.close();
+                try {
+                    if (reader != null)
+                        reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
+
+            return null;
+
+        }
+        @Override
+        protected void onPostExecute(String result) {
 
         }
     }
