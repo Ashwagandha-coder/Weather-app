@@ -4,12 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorTeal"
+    android:background="@color/colorTur"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="@string/logo"
+        android:layout_marginTop="50sp"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@user_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@id/logo"
+        android:backgroundTint=""
+        android:inputType="textPersonName"
+        android:text="Name" />
+
 </RelativeLayout>
