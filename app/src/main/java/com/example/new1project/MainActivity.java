@@ -2,6 +2,7 @@ package com.example.new1project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,9 +31,21 @@ public class MainActivity extends AppCompatActivity {
                 if(user_field.getText().toString().trim().equals(""))
                     Toast.makeText(MainActivity.this,R.string.no_user_input,Toast.LENGTH_LONG).show();
                 else {
+                    String city = user_field.getText().toString();
+                    String key = "1d3021f47c153ecc4ea3724ea8f1d9af";
+                    String url ="https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key + "&units=metric&lang=ru";
+
 
                 }
             }
         });
+    }
+
+    private class GetUrlData extends AsyncTask<String, String, String> {
+
+        @Override
+        protected String doInBackground(String... strings) {
+            return null;
+        }
     }
 }
