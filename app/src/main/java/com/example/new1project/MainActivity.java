@@ -98,18 +98,20 @@ public class MainActivity extends AppCompatActivity {
             return null;
 
         }
+        @SuppressLint("SetTextI18n")
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
 
             try {
                 JSONObject obj = new JSONObject(result);
+                result_info.setText("Температура" + obj.getJSONObject("main").getDouble("temp"));
+
             } catch (JSONException e) {
                 e.printStackTrace();
             }
 
 
-            result_info.setText(result);
 
         }
     }
