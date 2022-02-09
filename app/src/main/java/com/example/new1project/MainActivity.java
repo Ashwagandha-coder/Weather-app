@@ -11,6 +11,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -98,6 +101,13 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
+
+            try {
+                JSONObject obj = new JSONObject(result);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
 
             result_info.setText(result);
 
